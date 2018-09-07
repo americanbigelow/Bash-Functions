@@ -1,6 +1,6 @@
 #!/bin/bash
 
-checkuser()
+testifroot()				# Basically this just makes sure the user is not running the script as root.
 {
 	while [ $UID -eq 0 ]
 	do
@@ -19,6 +19,6 @@ checkuser()
 	done
 	}
 
-checkuser
+testifroot
 
 echo "You're not running this as root. That's a good thing."
