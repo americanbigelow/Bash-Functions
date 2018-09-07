@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#userdefinepath()
+#{
+
+#}
+
+getopts :p option 
+if [[ $option -eq p && -d $2 ]]
+then
+dirpath=$2
+echo "This all seems fine"
+else #if [[ $option -ne p ]]
+echo "Usage: $(basename)$# -p path/to/directory"
+fi
+
+echo done
